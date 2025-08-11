@@ -1,0 +1,68 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    // Define versions in a central place
+    ext {
+        // Plugin versions
+        agpVersion = '8.1.2'
+        kotlinVersion = '1.9.0'
+        hiltVersion = '2.48'
+        navigationVersion = '2.7.4'
+
+        // SDK versions
+        compileSdkVersion = 34
+        minSdkVersion = 24
+        targetSdkVersion = 34
+
+        // Dependency versions
+        playServicesAuthVersion = '20.7.0'
+        driveApiVersion = 'v3-rev20231112-2.0.0'
+        coroutinesVersion = '1.7.3'
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        // Android Gradle Plugin
+        classpath "com.android.tools.build:gradle:$agpVersion"
+        
+        // Kotlin Gradle Plugin
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        
+        // Hilt DI
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hiltVersion"
+        
+        // Navigation Safe Args
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"
+        
+        // Google Services (if using Firebase)
+        // classpath 'com.google.gms:google-services:4.3.15'
+    }
+}
+
+plugins {
+    // Version catalog plugin (alternative to buildscript)
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.5.0' // Simplifies JDK toolchain setup
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' } // For third-party libraries
+    }
+
+    // Configure Java toolchain for all modules
+    tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+        kotlinOptions {
+            jvmTarget = "17"
+            freeCompilerArgs += "-opt-in=kotlin.RequiresOptIn"
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
