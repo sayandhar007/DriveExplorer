@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_sort"
+        android:title="@string/sort"
+        app:showAsAction="never"/>
+</menu>
