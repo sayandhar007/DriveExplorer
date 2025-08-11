@@ -1,0 +1,24 @@
+<resources>
+    <!-- App Info -->
+    <string name="app_name">Drive Explorer</string>
+    
+    <!-- Common -->
+    <string name="loading">Loading…</string>
+    <string name="error_generic">Something went wrong</string>
+    
+    <!-- File Actions -->
+    <string name="move">Move</string>
+    <string name="copy">Copy</string>
+    <string name="share">Share</string>
+    <string name="delete">Delete</string>
+    
+    <!-- Share Dialog -->
+    <string name="share_dialog_title">Share \"%1$s\"</string>
+    <string name="role_viewer">Viewer</string>
+    <string name="role_commenter">Commenter</string>
+    <string name="role_editor">Editor</string>
+    
+    <!-- File Types -->
+    <string name="folder">Folder</string>
+    <string name="unknown_file">File</string>
+</resources>
