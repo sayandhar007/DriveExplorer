@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary colors -->
+    <color name="colorPrimary">#4285F4</color>  <!-- Google Blue -->
+    <color name="colorPrimaryDark">#3367D6</color>
+    <color name="colorAccent">#34A853</color>   <!-- Google Green -->
+    
+    <!-- Text colors -->
+    <color name="textPrimary">#202124</color>
+    <color name="textSecondary">#5F6368</color>
+    
+    <!-- Background colors -->
+    <color name="background">#FFFFFF</color>
+    <color name="surface">#F8F9FA</color>
+    
+    <!-- Status colors -->
+    <color name="success">#34A853</color>
+    <color name="warning">#FBBC05</color>       <!-- Google Yellow -->
+    <color name="error">#EA4335</color>         <!-- Google Red -->
+</resources>
