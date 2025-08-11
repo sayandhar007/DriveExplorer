@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_my_drive"
+            android:icon="@drawable/ic_drive"
+            android:title="@string/my_drive"/>
+        <item
+            android:id="@+id/nav_shared_drives"
+            android:icon="@drawable/ic_shared"
+            android:title="@string/shared_drives"/>
+    </group>
+    <item android:title="@string/categories">
+        <menu>
+            <item
+                android:id="@+id/nav_starred"
+                android:icon="@drawable/ic_star"
+                android:title="@string/starred"/>
+        </menu>
+    </item>
+</menu>
