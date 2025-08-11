@@ -1,0 +1,25 @@
+// Apply to all projects
+allprojects {
+    // Configure repositories
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" } // For third-party libs
+    }
+
+    // Common Android configurations
+    plugins.withId('com.android.application') {
+        android {
+            compileSdkVersion 34
+            defaultConfig {
+                minSdkVersion 24
+                targetSdkVersion 34
+                testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+            }
+            compileOptions {
+                sourceCompatibility JavaVersion.VERSION_17
+                targetCompatibility JavaVersion.VERSION_17
+            }
+        }
+    }
+}
